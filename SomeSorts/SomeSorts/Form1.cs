@@ -16,5 +16,22 @@ namespace SomeSorts
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(100);
+            listBox1.Items.Add(1000);
+            listBox1.Items.Add(10000);
+            listBox1.SelectedIndex = 0;
+            bt_run.Enabled = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label6.Visible = false;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
