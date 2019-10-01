@@ -48,13 +48,11 @@ namespace SomeSorts
 
         }
 
-        
-
         private void bt_run_Click(object sender, EventArgs e)
         {
-            Thread threadBubble = new Thread(new ParameterizedThreadStart(bubbleSort));
-            Thread threadShell = new Thread(new ParameterizedThreadStart(shellSort));
-            Thread threadQuick = new Thread(new ParameterizedThreadStart(quickSort));
+            Thread threadBubble = new Thread(bubbleSort);
+            Thread threadShell = new Thread(shellSort);
+            Thread threadQuick = new Thread(quickSort);
             threadBubble.Start(arr);
             threadShell.Start(arr);
             threadQuick.Start(arr);
