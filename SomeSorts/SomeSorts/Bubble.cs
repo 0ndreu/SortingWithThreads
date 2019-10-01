@@ -12,7 +12,7 @@ namespace SomeSorts
         public int changes = 0;
         public System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
 
-        private int[] BubbleSort(int[] arr)
+        public int[] BubbleSort(int[] arr)
         {
             int[] sortedArr = new int[arr.Length];
             int n = sortedArr.Length;

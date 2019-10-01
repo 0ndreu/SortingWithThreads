@@ -32,9 +32,9 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.bt_run = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.BubbleText = new System.Windows.Forms.Label();
+            this.ShellText = new System.Windows.Forms.Label();
+            this.QuickText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bt_gen
@@ -45,6 +45,7 @@
             this.bt_gen.TabIndex = 0;
             this.bt_gen.Text = "Generate";
             this.bt_gen.UseVisualStyleBackColor = true;
+            this.bt_gen.Click += new System.EventHandler(this.bt_gen_Click);
             // 
             // listBox1
             // 
@@ -62,6 +63,7 @@
             this.bt_run.TabIndex = 0;
             this.bt_run.Text = "Run!";
             this.bt_run.UseVisualStyleBackColor = true;
+            this.bt_run.Click += new System.EventHandler(this.bt_run_Click);
             // 
             // label1
             // 
@@ -72,41 +74,42 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "size of array";
             // 
-            // label2
+            // BubbleText
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "bubble";
+            this.BubbleText.AutoSize = true;
+            this.BubbleText.Location = new System.Drawing.Point(26, 148);
+            this.BubbleText.Name = "BubbleText";
+            this.BubbleText.Size = new System.Drawing.Size(39, 13);
+            this.BubbleText.TabIndex = 3;
+            this.BubbleText.Text = "bubble";
             // 
-            // label3
+            // ShellText
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(258, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "shell";
+            this.ShellText.AutoSize = true;
+            this.ShellText.Location = new System.Drawing.Point(258, 148);
+            this.ShellText.Name = "ShellText";
+            this.ShellText.Size = new System.Drawing.Size(28, 13);
+            this.ShellText.TabIndex = 4;
+            this.ShellText.Text = "shell";
+            this.ShellText.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label6
+            // QuickText
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(481, 148);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "quick";
+            this.QuickText.AutoSize = true;
+            this.QuickText.Location = new System.Drawing.Point(481, 148);
+            this.QuickText.Name = "QuickText";
+            this.QuickText.Size = new System.Drawing.Size(33, 13);
+            this.QuickText.TabIndex = 7;
+            this.QuickText.Text = "quick";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 450);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.QuickText);
+            this.Controls.Add(this.ShellText);
+            this.Controls.Add(this.BubbleText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.bt_run);
@@ -124,9 +127,9 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button bt_run;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label BubbleText;
+        private System.Windows.Forms.Label ShellText;
+        private System.Windows.Forms.Label QuickText;
     }
 }
 

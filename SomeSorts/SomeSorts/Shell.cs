@@ -12,7 +12,7 @@ namespace SomeSorts
         public int changes = 0;
         public System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
 
-        public int[] startSorting(int[] arr)
+        public int[] ShellSort(int[] arr)
         {
             timer.Start();
             int[] sortedArr = new int[arr.Length];
