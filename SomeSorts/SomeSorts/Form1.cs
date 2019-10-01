@@ -39,7 +39,10 @@ namespace SomeSorts
             int len = int.Parse(listBox1.SelectedItem.ToString());
             arr = new int[len];
             for (int i = 0; i < len; i++)
+            {
                 arr[i] = rnd.Next();
+            }
+            
 
             bt_run.Enabled = true;
 
@@ -49,10 +52,6 @@ namespace SomeSorts
 
         private void bt_run_Click(object sender, EventArgs e)
         {
-            BubbleText.Text = "";
-            ShellText.Text = "";
-            QuickText.Text = "";
-
             Thread threadBubble = new Thread(new ParameterizedThreadStart(bubbleSort));
             Thread threadShell = new Thread(new ParameterizedThreadStart(shellSort));
             Thread threadQuick = new Thread(new ParameterizedThreadStart(quickSort));
@@ -65,43 +64,29 @@ namespace SomeSorts
         {
             var sort = new Bubble();
             var result = sort.BubbleSort((int[])arr);
-            BubbleText.Text = "Shell sort:" +
-                                    System.Environment.NewLine +
+            BubbleText.Text = "Bubble sort:\n" +
                                     "Iterations: " + sort.iterations +
-                                    System.Environment.NewLine +
-                                    "Changes: " + sort.changes +
-                                    System.Environment.NewLine +
-                                    "Total ticks: " + sort.timer.ElapsedTicks;
+                                    "\nChanges: " + sort.changes +
+                                    "\nTotal ticks: " + sort.timer.ElapsedTicks;
         }
 
         private void shellSort(object arr)
         {
             var sort = new Shell();
             var result = sort.ShellSort((int[])arr);
-            ShellText.Text = "Shell sort:" +
-                                    System.Environment.NewLine +
+            ShellText.Text = "Shell sort:\n" +
                                     "Iterations: " + sort.iterations +
-                                    System.Environment.NewLine +
-                                    "Changes: " + sort.changes +
-                                    System.Environment.NewLine +
-                                    "Total ticks: " + sort.timer.ElapsedTicks;
+                                    "\nChanges: " + sort.changes +
+                                    "\nTotal ticks: " + sort.timer.ElapsedTicks;
         }
         private void quickSort(object arr)
         {
             var sort = new Quick();
             var result = sort.QuickSort((int[])arr);
-            QuickText.Text = "Shell sort:" +
-                                    System.Environment.NewLine +
+            QuickText.Text = "Quick sort:\n" +
                                     "Iterations: " + sort.iterations +
-                                    System.Environment.NewLine +
-                                    "Changes: " + sort.changes +
-                                    System.Environment.NewLine +
-                                    "Total ticks: " + sort.timer.ElapsedTicks;
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+                                    "\nChanges: " + sort.changes +
+                                    "\nTotal ticks: " + sort.timer.ElapsedTicks;
         }
     }
 }

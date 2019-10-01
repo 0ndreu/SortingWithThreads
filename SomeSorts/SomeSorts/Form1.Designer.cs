@@ -91,7 +91,6 @@
             this.ShellText.Size = new System.Drawing.Size(28, 13);
             this.ShellText.TabIndex = 4;
             this.ShellText.Text = "shell";
-            this.ShellText.Click += new System.EventHandler(this.label3_Click);
             // 
             // QuickText
             // 
