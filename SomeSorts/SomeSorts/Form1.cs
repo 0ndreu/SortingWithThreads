@@ -28,10 +28,6 @@ namespace SomeSorts
             label3.Visible = false;
             label6.Visible = false;
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
