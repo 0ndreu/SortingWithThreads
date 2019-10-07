@@ -27,9 +27,6 @@ namespace SomeSorts
             listBox1.Items.Add(10);
             listBox1.SelectedIndex = 3;
             bt_run.Enabled = false;
-            BubbleText.Visible = false;
-            ShellText.Visible = false;
-            QuickText.Visible = false;
         }
 
         private void bt_gen_Click(object sender, EventArgs e)
